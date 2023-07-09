@@ -1,13 +1,6 @@
 import express from 'express'
 import router from "./router/router";
+const app = express()
 
-let app = express()
-
-
-app.use("/router", router)
-app.get("/", (req,res) => {
-    res.json("Helg1lo");
-})
-
-
-app.listen(5000, () => console.log("Server started"))
+app.use("/", router)
+app.listen(5000, () => console.log("server started"))
